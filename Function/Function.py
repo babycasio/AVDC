@@ -8,7 +8,7 @@ from configparser import ConfigParser
 from Getter import avsox, javbus, javdb, mgstage, dmm, jav321, xcity
 
 
-# ========================================================================获取config
+# ========================================================================Get config
 def get_config():
     config_file = ''
     if os.path.exists('../config.ini'):
@@ -20,7 +20,7 @@ def get_config():
     return config
 
 
-# ========================================================================是否为无码
+# ========================================================================Whether it is uncensored
 def is_uncensored(number):
     if re.match('^\d{4,}', number) or re.match('n\d{4}', number) or 'HEYZO' in number.upper():
         return True
@@ -32,7 +32,7 @@ def is_uncensored(number):
     return False
 
 
-# ========================================================================元数据获取失败检测
+# ========================================================================Metadata acquisition failure detection
 def getDataState(json_data):
     if json_data['title'] == '' or json_data['title'] == 'None' or json_data['title'] == 'null':
         return 0
@@ -40,7 +40,7 @@ def getDataState(json_data):
         return 1
 
 
-# ========================================================================去掉异常字符
+# ========================================================================Remove abnormal characters
 def escapePath(path, Config):  # Remove escape literals
     escapeLiterals = Config['escape']['literals']
     backslash = '\\'
@@ -49,7 +49,7 @@ def escapePath(path, Config):  # Remove escape literals
     return path
 
 
-# ========================================================================获取视频列表
+# ========================================================================Get a list of videos
 def movie_lists(escape_folder, movie_type, movie_path):
     if escape_folder != '':
         escape_folder = re.split('[,，]', escape_folder)
@@ -78,7 +78,7 @@ def movie_lists(escape_folder, movie_type, movie_path):
     return total
 
 
-# ========================================================================获取番号
+# ========================================================================Get serial number
 def getNumber(filepath, escape_string):
     filepath = filepath.replace('-C.', '.').replace('-c.', '.')
     filename = os.path.splitext(filepath.split('/')[-1])[0]
@@ -92,9 +92,9 @@ def getNumber(filepath, escape_string):
     if re.search('-cd\d+', filename):
         part = re.findall('-cd\d+', filename)[0]
     filename = filename.replace(part, '')
-    filename = str(re.sub("-\d{4}-\d{1,2}-\d{1,2}", "", filename))  # 去除文件名中时间
-    filename = str(re.sub("\d{4}-\d{1,2}-\d{1,2}-", "", filename))  # 去除文件名中时间
-    if re.search('^\D+\.\d{2}\.\d{2}\.\d{2}', filename):  # 提取欧美番号 sexart.11.11.11
+    filename = str(re.sub("-\d{4}-\d{1,2}-\d{1,2}", "", filename))  # Remove the time in the file name
+    filename = str(re.sub("\d{4}-\d{1,2}-\d{1,2}-", "", filename))  # Remove the time in the file name
+    if re.search('^\D+\.\d{2}\.\d{2}\.\d{2}', filename):  # Extract European and American numbers sexart.11.11.11
         try:
             file_number = re.search('\D+\.\d{2}\.\d{2}\.\d{2}', filename).group()
             return file_number
@@ -103,27 +103,27 @@ def getNumber(filepath, escape_string):
     elif re.search('XXX-AV-\d{4,}', filename.upper()):  # 提取xxx-av-11111
         file_number = re.search('XXX-AV-\d{4,}', filename.upper()).group()
         return file_number
-    elif '-' in filename or '_' in filename:  # 普通提取番号 主要处理包含减号-和_的番号
+    elif '-' in filename or '_' in filename:  # Ordinary extraction number mainly deals with numbers containing minus signs-and _
         if 'FC2' or 'fc2' in filename:
             filename = filename.upper().replace('PPV', '').replace('--', '-')
-        if re.search('FC2-\d{5,}', filename):  # 提取类似fc2-111111番号
+        if re.search('FC2-\d{5,}', filename):  # Extract similar numbers from fc2-111111
             file_number = re.search('FC2-\d{5,}', filename).group()
-        elif re.search('[a-zA-Z]+-\d+', filename):  # 提取类似mkbd-120番号
+        elif re.search('[a-zA-Z]+-\d+', filename):  # Extract similar mkbd-120 number
             file_number = re.search('\w+-\d+', filename).group()
-        elif re.search('\d+[a-zA-Z]+-\d+', filename):  # 提取类似259luxu-1111番号
+        elif re.search('\d+[a-zA-Z]+-\d+', filename):  # Extract numbers similar to 259luxu-1111
             file_number = re.search('\d+[a-zA-Z]+-\d+', filename).group()
-        elif re.search('[a-zA-Z]+-[a-zA-Z]\d+', filename):  # 提取类似mkbd-s120番号
+        elif re.search('[a-zA-Z]+-[a-zA-Z]\d+', filename):  # Extract similar mkbd-s120 number
             file_number = re.search('[a-zA-Z]+-[a-zA-Z]\d+', filename).group()
-        elif re.search('\d+-[a-zA-Z]+', filename):  # 提取类似 111111-MMMM 番号
+        elif re.search('\d+-[a-zA-Z]+', filename):  # Extract the number similar to 111111-MMMM
             file_number = re.search('\d+-[a-zA-Z]+', filename).group()
-        elif re.search('\d+-\d+', filename):  # 提取类似 111111-000 番号
+        elif re.search('\d+-\d+', filename):  # Extract numbers similar to 111111-000
             file_number = re.search('\d+-\d+', filename).group()
-        elif re.search('\d+_\d+', filename):  # 提取类似 111111_000 番号
+        elif re.search('\d+_\d+', filename):  # Extract numbers similar to 111111_000
             file_number = re.search('\d+_\d+', filename).group()
         else:
             file_number = filename
         return file_number
-    else:  # 提取不含减号-的番号，FANZA CID 保留ssni00644，将MIDE139改成MIDE-139
+    else:  # Extract the number without minus sign -, FANZA CID keep ssni00644, change MIDE139 to MIDE-139
         try:
             file_number = os.path.splitext(filename.split('/')[-1])[0]
             find_num = re.findall(r'\d+', file_number)[0]
@@ -135,13 +135,13 @@ def getNumber(filepath, escape_string):
             return os.path.splitext(filepath.split('/')[-1])[0]
 
 
-# ========================================================================根据番号获取数据
-def getDataFromJSON(file_number, config, mode, appoint_url):  # 从JSON返回元数据
-    # ================================================网站规则添加开始================================================
+# ========================================================================Get data according to the serial number
+def getDataFromJSON(file_number, config, mode, appoint_url):  # 从JSON returns metadata
+    # ================================================Start of adding site rules================================================
     isuncensored = is_uncensored(file_number)
     json_data = {}
-    if mode == 1:  # 从全部网站刮削
-        # =======================================================================无码抓取:111111-111,n1111,HEYZO-1111,SMD-115
+    if mode == 1:  # Scraping from all sites
+        # =======================================================================Uncoded capture: 111111-111, n1111, HEYZO-1111, SMD-115
         if isuncensored:
             json_data = json.loads(javbus.main_uncensored(file_number, appoint_url))
             if getDataState(json_data) == 0:
@@ -188,51 +188,51 @@ def getDataFromJSON(file_number, config, mode, appoint_url):  # 从JSON返回元
             'actor': '',
             'website': '',
         }
-    elif mode == 2:  # 仅从mgstage
+    elif mode == 2:  # Only from mgstage
         json_data = json.loads(mgstage.main(file_number, appoint_url))
-    elif mode == 3:  # 仅从javbus
+    elif mode == 3:  # Only from javbus
         if isuncensored:
             json_data = json.loads(javbus.main_uncensored(file_number, appoint_url))
         elif re.search('\D+\.\d{2}\.\d{2}\.\d{2}', file_number):
             json_data = json.loads(javbus.main_us(file_number, appoint_url))
         else:
             json_data = json.loads(javbus.main(file_number, appoint_url))
-    elif mode == 4:  # 仅从jav321
+    elif mode == 4:  # Only from jav321
         json_data = json.loads(jav321.main(file_number, isuncensored, appoint_url))
-    elif mode == 5:  # 仅从javdb
+    elif mode == 5:  # Only from javdb
         if re.search('\D+\.\d{2}\.\d{2}\.\d{2}', file_number):
             json_data = json.loads(javdb.main_us(file_number, appoint_url))
         else:
             json_data = json.loads(javdb.main(file_number, appoint_url, isuncensored))
-    elif mode == 6:  # 仅从avsox
+    elif mode == 6:  # Only from avsox
         json_data = json.loads(avsox.main(file_number, appoint_url))
-    elif mode == 7:  # 仅从xcity
+    elif mode == 7:  # Only from xcity
         json_data = json.loads(xcity.main(file_number, appoint_url))
-    elif mode == 8:  # 仅从dmm
+    elif mode == 8:  # Only from dmm
         json_data = json.loads(dmm.main(file_number, appoint_url))
 
-    # ================================================网站规则添加结束================================================
+    # ================================================End of site rule addition================================================
     # print(json_data)
-    # ======================================超时或未找到
+    # ======================================Timeout or not found
     if json_data['website'] == 'timeout':
         return json_data
     elif json_data['title'] == '':
         return json_data
-    # ======================================处理得到的信息
+    # ======================================Processed information
     title = json_data['title']
     number = json_data['number']
-    actor_list = str(json_data['actor']).strip("[ ]").replace("'", '').split(',')  # 字符串转列表
+    actor_list = str(json_data['actor']).strip("[ ]").replace("'", '').split(',')  # String to list
     release = json_data['release']
     try:
         cover_small = json_data['cover_small']
     except:
         cover_small = ''
-    tag = str(json_data['tag']).strip("[ ]").replace("'", '').replace(" ", '').split(',')  # 字符串转列表 @
+    tag = str(json_data['tag']).strip("[ ]").replace("'", '').replace(" ", '').split(',')  # String to List @
     actor = str(actor_list).strip("[ ]").replace("'", '').replace(" ", '')
     if actor == '':
         actor = 'Unknown'
 
-    # ====================处理异常字符====================== #\/:*?"<>|
+    # ====================Handling abnormal characters====================== #\/:*?"<>|
     title = title.replace('\\', '')
     title = title.replace('/', '')
     title = title.replace(':', '')
@@ -252,13 +252,13 @@ def getDataFromJSON(file_number, config, mode, appoint_url):  # 从JSON返回元
     for key, value in json_data.items():
         if key == 'title' or key == 'studio' or key == 'director' or key == 'series' or key == 'publisher':
             json_data[key] = str(value).replace('/', '')
-    # ====================处理异常字符 END================== #\/:*?"<>|
+    # ====================Handling abnormal characters END================== #\/:*?"<>|
 
     naming_media = config['Name_Rule']['naming_media']
     naming_file = config['Name_Rule']['naming_file']
     folder_name = config['Name_Rule']['folder_name']
 
-    # 返回处理后的json_data
+    # Return the processed json_data
     json_data['title'] = title
     json_data['number'] = number
     json_data['actor'] = actor
@@ -271,7 +271,7 @@ def getDataFromJSON(file_number, config, mode, appoint_url):  # 从JSON返回元
     return json_data
 
 
-# ========================================================================返回json里的数据
+# ========================================================================Return the data in json
 def get_info(json_data):
     for key, value in json_data.items():
         if value == '' or value == 'N/A':
@@ -294,7 +294,7 @@ def get_info(json_data):
     return title, studio, publisher, year, outline, runtime, director, actor_photo, actor, release, tag, number, cover, website, series
 
 
-# ========================================================================保存配置到config.ini
+# ========================================================================Save the configuration to config.ini
 def save_config(json_config):
     # json_config = json.loads(json_config)
     config_file = ''
@@ -382,5 +382,5 @@ def check_pic(path_pic):
         img.load()
         return True
     except (FileNotFoundError, OSError):
-        # print('文件损坏')
+        # print('damaged file')
         return False
