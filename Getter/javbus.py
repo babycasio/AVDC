@@ -21,7 +21,7 @@ def getActorPhoto(htmlcode):
     return d
 
 
-def getTitle(htmlcode):  # 获取标题
+def getTitle(htmlcode):  # Get title
     doc = pq(htmlcode)
     title = str(doc('div.container h3').text())
     try:
@@ -31,19 +31,19 @@ def getTitle(htmlcode):  # 获取标题
         return title
 
 
-def getStudio(htmlcode):  # 获取厂商
+def getStudio(htmlcode):  # Obtain Vendor
     html = etree.fromstring(htmlcode, etree.HTMLParser())
     result = str(html.xpath('//span[contains(text(),"製作商")]/following-sibling::a/text()')).strip(" ['']")
     return result
 
 
-def getPublisher(htmlcode):  # 获取发行商
+def getPublisher(htmlcode):  # Get the publisher
     html = etree.fromstring(htmlcode, etree.HTMLParser())
     result = str(html.xpath('//span[contains(text(),"發行商")]/following-sibling::a/text()')).strip(" ['']")
     return result
 
 
-def getYear(getRelease):  # 获取年份
+def getYear(getRelease):  # Get the year
     try:
         result = str(re.search('\d{4}', getRelease).group())
         return result
@@ -51,31 +51,31 @@ def getYear(getRelease):  # 获取年份
         return getRelease
 
 
-def getCover(htmlcode):  # 获取封面链接
+def getCover(htmlcode):  # Get cover link
     doc = pq(htmlcode)
     image = doc('a.bigImage')
     return 'https://javbus.com' + image.attr('href')
 
 
-def getExtraFanart(htmlcode):  # 获取封面链接
+def getExtraFanart(htmlcode):  # Get cover link
     html = etree.fromstring(htmlcode, etree.HTMLParser())
     extrafanart_list = html.xpath("//div[@id='sample-waterfall']/a/@href")
     return extrafanart_list
 
 
-def getRelease(htmlcode):  # 获取出版日期
+def getRelease(htmlcode):  # Get the publication date
     html = etree.fromstring(htmlcode, etree.HTMLParser())
     result = str(html.xpath('//span[contains(text(),"發行日期")]/../text()')).strip(" ['']")
     return result
 
 
-def getRuntime(htmlcode):  # 获取分钟
+def getRuntime(htmlcode):  # Get duration
     html = etree.fromstring(htmlcode, etree.HTMLParser())
     result = str(html.xpath('//span[contains(text(),"長度")]/../text()')).strip(" ['']")
     return result
 
 
-def getActor(htmlcode):  # 获取女优
+def getActor(htmlcode):  # Get actress
     b = []
     soup = BeautifulSoup(htmlcode, 'lxml')
     a = soup.find_all(attrs={'class': 'star-name'})
@@ -84,19 +84,19 @@ def getActor(htmlcode):  # 获取女优
     return b
 
 
-def getNum(htmlcode):  # 获取番号
+def getNum(htmlcode):  # Get serial number
     html = etree.fromstring(htmlcode, etree.HTMLParser())
     result = str(html.xpath('//span[contains(text(),"識別碼")]/following-sibling::span/text()')).strip(" ['']")
     return result
 
 
-def getDirector(htmlcode):  # 获取导演
+def getDirector(htmlcode):  # Get director
     html = etree.fromstring(htmlcode, etree.HTMLParser())
     result = str(html.xpath('//span[contains(text(),"導演")]/following-sibling::a/text()')).strip(" ['']")
     return result
 
 
-def getOutlineScore(number):  # 获取简介
+def getOutlineScore(number):  # Get an introduction
     outline = ''
     score = ''
     try:
@@ -132,14 +132,14 @@ def getSeries(htmlcode):
     return result
 
 
-def getCover_small(number):  # 从avsox获取封面图
+def getCover_small(number):  # Get the cover image from avsox
     try:
         htmlcode = get_html('https://avsox.website/cn/search/' + number)
         html = etree.fromstring(htmlcode, etree.HTMLParser())
         counts = len(html.xpath("//div[@id='waterfall']/div/a/div"))
         if counts == 0:
             return ''
-        for count in range(1, counts + 1):  # 遍历搜索结果，找到需要的番号
+        for count in range(1, counts + 1):  # Traverse the search results and find the number you need
             number_get = html.xpath(
                 "//div[@id='waterfall']/div[" + str(count) + "]/a/div[@class='photo-info']/span/date[1]/text()")
             if len(number_get) > 0 and number_get[0].upper() == number.upper():
@@ -151,7 +151,7 @@ def getCover_small(number):  # 从avsox获取封面图
     return ''
 
 
-def getTag(htmlcode):  # 获取标签
+def getTag(htmlcode):  # Get the label
     tag = []
     soup = BeautifulSoup(htmlcode, 'lxml')
     a = soup.find_all(attrs={'class': 'genre'})
@@ -163,13 +163,13 @@ def getTag(htmlcode):  # 获取标签
 
 
 def find_number(number):
-    # =======================================================================有码搜索
+    # =======================================================================Code search
     if not (re.match('^\d{4,}', number) or re.match('n\d{4}', number) or 'HEYZO' in number.upper()):
         htmlcode = get_html('https://www.javbus.com/search/' + number + '&type=1')
         html = etree.fromstring(htmlcode, etree.HTMLParser())  # //table/tr[1]/td[1]/text()
         counts = len(html.xpath("//div[@id='waterfall']/div[@id='waterfall']/div"))
         if counts != 0:
-            for count in range(1, counts + 1):  # 遍历搜索结果，找到需要的番号
+            for count in range(1, counts + 1):  # Traverse the search results and find the number you need
                 number_get = html.xpath("//div[@id='waterfall']/div[@id='waterfall']/div[" + str(
                     count) + "]/a[@class='movie-box']/div[@class='photo-info']/span/date[1]/text()")[0]
                 number_get = number_get.upper()
@@ -180,13 +180,13 @@ def find_number(number):
                         "//div[@id='waterfall']/div[@id='waterfall']/div[" + str(
                             count) + "]/a[@class='movie-box']/@href")[0]
                     return result_url
-    # =======================================================================无码搜索
+    # =======================================================================Uncoded search
     htmlcode = get_html('https://www.javbus.com/uncensored/search/' + number + '&type=1')
     html = etree.fromstring(htmlcode, etree.HTMLParser())  # //table/tr[1]/td[1]/text()
     counts = len(html.xpath("//div[@id='waterfall']/div[@id='waterfall']/div"))
     if counts == 0:
         return 'not found'
-    for count in range(1, counts + 1):  # 遍历搜索结果，找到需要的番号
+    for count in range(1, counts + 1):  # Traverse the search results and find the number you need
         number_get = html.xpath("//div[@id='waterfall']/div[@id='waterfall']/div[" + str(
             count) + "]/a[@class='movie-box']/div[@class='photo-info']/span/date[1]/text()")[0]
         number_get = number_get.upper()
@@ -321,7 +321,7 @@ def main_us(number, appoint_url=''):
                 raise Exception('Movie Data not found in javbus.main_us!')
             result_url = ''
             cover_small = ''
-            for count in range(1, counts + 1):  # 遍历搜索结果，找到需要的番号
+            for count in range(1, counts + 1):  # Traverse the search results and find the number you need
                 number_get = html.xpath("//div[@id='waterfall']/div[" + str(
                     count) + "]/a[@class='movie-box']/div[@class='photo-info']/span/date[1]/text()")[0]
                 if number_get.upper() == number.upper() or number_get.replace('-', '').upper() == number.upper():
