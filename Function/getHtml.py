@@ -4,7 +4,7 @@ from configparser import ConfigParser
 import cloudscraper
 
 
-# ========================================================================获取config
+# ========================================================================Get config
 def get_config():
     config_file = ''
     if os.path.exists('../config.ini'):
@@ -20,7 +20,7 @@ def get_config():
     return proxy_type, proxy, timeout, retry_count
 
 
-# ========================================================================获取proxies
+# ========================================================================Get proxies
 def get_proxies(proxy_type, proxy):
     proxies = {}
     if proxy == '' or proxy_type == '' or proxy_type == 'no':
@@ -32,13 +32,13 @@ def get_proxies(proxy_type, proxy):
     return proxies
 
 
-# ========================================================================网页请求
-# 破解cf5秒盾
+# ========================================================================Page request
+# Crack cf5 second shield
 def get_html_javdb(url):
     scraper = cloudscraper.create_scraper()
-    # 发送请求，获得响应
+    # Send request, get response
     response = scraper.get(url)
-    # 获得网页源代码
+    # Get the source code of the webpage
     html = response.text
     return html
 
