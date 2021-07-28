@@ -71,7 +71,7 @@ class MyMAinWindow(QMainWindow, Ui_AVDV):
         self.Ui.treeWidget_number.expandAll()
 
     def set_style(self):
-        # Control beautification
+        # Controls styling
         self.Ui.widget_setting.setStyleSheet(
             '''
             QWidget#widget_setting{
@@ -1188,9 +1188,9 @@ class MyMAinWindow(QMainWindow, Ui_AVDV):
                 if json_data['imagecut'] == 3:
                     print("  <tag>無碼</tag>", file=code)
                 if leak == 1:
-                    print("  <tag>流出</tag>", file=code)
+                    print("  <tag>leak</tag>", file=code)
                 if cn_sub == 1:
-                    print("  <tag>中文字幕</tag>", file=code)
+                    print("  <tag>chinese_subtitles</tag>", file=code)
                 if series != 'unknown':
                     print("  <tag>" + '系列:' + series + "</tag>", file=code)
                 if studio != 'unknown':
@@ -1206,9 +1206,9 @@ class MyMAinWindow(QMainWindow, Ui_AVDV):
                 if json_data['imagecut'] == 3:
                     print("  <genre>無碼</genre>", file=code)
                 if leak == 1:
-                    print("  <genre>流出</genre>", file=code)
+                    print("  <genre>leak</genre>", file=code)
                 if cn_sub == 1:
-                    print("  <genre>中文字幕</genre>", file=code)
+                    print("  <genre>chinese subtitle</genre>", file=code)
                 if series != 'unknown':
                     print("  <genre>" + '系列:' + series + "</genre>", file=code)
                 if studio != 'unknown':
