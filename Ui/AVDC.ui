@@ -41,7 +41,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>开始</string>
+       <string>Start</string>
       </property>
      </widget>
      <widget class="QTextBrowser" name="textBrowser_warning">
@@ -98,17 +98,17 @@ p, li { white-space: pre-wrap; }
       </property>
       <column>
        <property name="text">
-        <string>番号</string>
+        <string>Number</string>
        </property>
       </column>
       <item>
        <property name="text">
-        <string>成功</string>
+        <string>success</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>失败</string>
+        <string>Fail</string>
        </property>
       </item>
      </widget>
@@ -128,7 +128,7 @@ p, li { white-space: pre-wrap; }
           <enum>QFrame::Box</enum>
          </property>
          <property name="text">
-          <string>封面图</string>
+          <string>Cover picture</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -162,7 +162,7 @@ p, li { white-space: pre-wrap; }
           <enum>QFrame::Box</enum>
          </property>
          <property name="text">
-          <string>缩略图</string>
+          <string>Thumbnail</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -197,7 +197,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>番号：</string>
+       <string>Number ：</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_number">
@@ -229,7 +229,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>发行日期：</string>
+       <string>Release date ：</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_release">
@@ -258,7 +258,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>演员：</string>
+       <string>Actor ：</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_actor">
@@ -309,7 +309,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>简介：</string>
+       <string>Introduction ：</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_title">
@@ -341,7 +341,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>标题：</string>
+       <string>Title ：</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_director">
@@ -389,7 +389,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>导演：</string>
+       <string>Director ：</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_24">
@@ -402,7 +402,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>发行：</string>
+       <string>Issued ：</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_studio">
@@ -450,7 +450,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>制作：</string>
+       <string>Make ：</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_31">
@@ -463,7 +463,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>系列：</string>
+       <string>Series ：</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_tag">
@@ -495,7 +495,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>类别：</string>
+       <string>Category ：</string>
       </property>
      </widget>
      <widget class="QCheckBox" name="checkBox_cover">
@@ -508,7 +508,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>显示封面(取消勾选后，立即关闭封面显示)</string>
+       <string>Show cover (after unchecking, the cover display will be turned off immediately)</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_progress">
@@ -545,7 +545,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="title">
-       <string>视频、字幕移动</string>
+       <string>Video, subtitles move</string>
       </property>
       <widget class="QLabel" name="label_8">
        <property name="geometry">
@@ -557,8 +557,8 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>‘视频目录’的所有子目录(不包括排除目录)下的视频及同名字幕，
-移动到‘视频目录’下的‘Movie_moved’目录下。</string>
+        <string>Videos and subtitles of the same name under all sub-directories (excluding excluded directories) of the video directory’,
+Move to the ‘Movie_moved’ directory under the ‘Video Directory’. </string>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_move_mp4">
@@ -571,7 +571,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>开始移动</string>
+        <string>Start moving</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_41">
@@ -584,7 +584,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>排除目录：</string>
+        <string>Exclude directory ：</string>
        </property>
       </widget>
       <widget class="QLineEdit" name="lineEdit_escape_dir_move">
@@ -608,7 +608,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="title">
-       <string>单文件刮削</string>
+       <string>Single file scraping</string>
       </property>
       <widget class="QLabel" name="label">
        <property name="geometry">
@@ -620,8 +620,8 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>选择单个文件(‘视频目录’下或者子目录下)。
-不指定番号，则默认使用文件名做为番号进行刮削。</string>
+        <string>Select a single file (under the ‘video directory’ or under a subdirectory).
+If the serial number is not specified, the file name will be used as the serial number for scraping by default. </string>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_select_file">
@@ -634,7 +634,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>选择文件</string>
+        <string>Select a document</string>
        </property>
       </widget>
       <widget class="QComboBox" name="comboBox_website">
@@ -697,7 +697,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>刮削网站:</string>
+        <string>Scraping site :</string>
        </property>
       </widget>
       <widget class="QLineEdit" name="lineEdit_appoint_url">
@@ -720,7 +720,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>刮削网址：</string>
+        <string>Scrape url ：</string>
        </property>
       </widget>
       <widget class="QLineEdit" name="lineEdit_movie_number">
@@ -743,7 +743,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>影片番号：</string>
+        <string>Movie number ：</string>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_start_single_file">
@@ -756,7 +756,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>刮削</string>
+        <string>Scrape</string>
        </property>
       </widget>
      </widget>
@@ -770,7 +770,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="title">
-       <string>Emby-演员头像</string>
+       <string>Emby-Actor avatar</string>
       </property>
       <widget class="QPushButton" name="pushButton_add_actor_pic">
        <property name="geometry">
@@ -782,7 +782,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>添加头像</string>
+        <string>Add avatar</string>
        </property>
       </widget>
       <widget class="QLineEdit" name="lineEdit_emby_url">
@@ -805,7 +805,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>Emby地址：</string>
+        <string>Emby address ：</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_4">
@@ -818,7 +818,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>API密钥：</string>
+        <string>API key ：</string>
        </property>
       </widget>
       <widget class="QLineEdit" name="lineEdit_api_key">
@@ -841,9 +841,9 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>说明:
-   1、头像请放在程序目录(AVDC目录)下的Actor目录中。
-   2、密钥创建方法：Emby控制台-&gt;高级-&gt;API密钥-&gt;添加(APP名称任意)。</string>
+        <string>Instruction :
+   1. Please put the avatar in the Actor directory under the program directory (AVDC directory).
+   2. Key creation method: Emby console->Advanced->API key->Add (any APP name). </string>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_show_pic_actor">
@@ -856,7 +856,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>查看</string>
+        <string>Check</string>
        </property>
       </widget>
       <widget class="QComboBox" name="comboBox_pic_actor">
@@ -870,22 +870,22 @@ p, li { white-space: pre-wrap; }
        </property>
        <item>
         <property name="text">
-         <string>可添加头像的演员</string>
+         <string>Actors who can add avatars</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>没有头像的演员</string>
+         <string>Actors without avatars</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>已有头像的演员</string>
+         <string>Actors with avatars</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>所有演员</string>
+         <string>All actors</string>
         </property>
        </item>
       </widget>
@@ -900,7 +900,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="title">
-       <string>裁剪封面图</string>
+       <string>Cropping surface</string>
       </property>
       <widget class="QPushButton" name="pushButton_select_thumb">
        <property name="geometry">
@@ -912,7 +912,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>选择缩略图</string>
+        <string>Choice thumbnails</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_6">
@@ -925,9 +925,9 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>说明:
-  1、对有些封面图(poster)不满意,比例不对或者分辨率太低,可使用此工具。
-  2、此工具通过判断人脸位置，可以将缩略图(thumb)裁剪为封面图。</string>
+        <string>Explanation :
+  1. Opposite trivial image (poster) Involuntary, Proportional non-conformity or low resolution, Usable This tool.
+  2. this tool pass judgment person's position, can general thumbnail (thumb) trimming seal image. </string>
        </property>
       </widget>
      </widget>
@@ -943,7 +943,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>保存</string>
+       <string>Keep</string>
       </property>
      </widget>
      <widget class="QTabWidget" name="tabWidget">
@@ -960,7 +960,7 @@ p, li { white-space: pre-wrap; }
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
-        <string>普通设置</string>
+        <string>Normal setting</string>
        </attribute>
        <widget class="QGroupBox" name="groupBox_10">
         <property name="geometry">
@@ -972,7 +972,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="title">
-         <string>普通设置</string>
+         <string>Normal setting</string>
         </property>
         <widget class="QWidget" name="verticalLayoutWidget_2">
          <property name="geometry">
@@ -987,7 +987,7 @@ p, li { white-space: pre-wrap; }
           <item>
            <widget class="QGroupBox" name="groupBox">
             <property name="title">
-             <string>模式：</string>
+             <string>Schematic / 模式：</string>
             </property>
             <widget class="QWidget" name="horizontalLayoutWidget_7">
              <property name="geometry">
@@ -1002,14 +1002,14 @@ p, li { white-space: pre-wrap; }
               <item>
                <widget class="QRadioButton" name="radioButton_common">
                 <property name="text">
-                 <string>刮削模式</string>
+                 <string>Cutting model</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QRadioButton" name="radioButton_sort">
                 <property name="text">
-                 <string>整理模式</string>
+                 <string>Arrangement model</string>
                 </property>
                </widget>
               </item>
@@ -1020,7 +1020,7 @@ p, li { white-space: pre-wrap; }
           <item>
            <widget class="QGroupBox" name="groupBox_2">
             <property name="title">
-             <string>软链接模式：</string>
+             <string>Model of contact ：</string>
             </property>
             <widget class="QWidget" name="horizontalLayoutWidget_8">
              <property name="geometry">
@@ -1035,14 +1035,14 @@ p, li { white-space: pre-wrap; }
               <item>
                <widget class="QRadioButton" name="radioButton_soft_on">
                 <property name="text">
-                 <string>开</string>
+                 <string>Open</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QRadioButton" name="radioButton_soft_off">
                 <property name="text">
-                 <string>关</string>
+                 <string>Related</string>
                 </property>
                </widget>
               </item>
@@ -1053,7 +1053,7 @@ p, li { white-space: pre-wrap; }
           <item>
            <widget class="QGroupBox" name="groupBox_3">
             <property name="title">
-             <string>调试模式：</string>
+             <string>Debugging model ：</string>
             </property>
             <widget class="QWidget" name="horizontalLayoutWidget_9">
              <property name="geometry">
@@ -1068,14 +1068,14 @@ p, li { white-space: pre-wrap; }
               <item>
                <widget class="QRadioButton" name="radioButton_debug_on">
                 <property name="text">
-                 <string>开</string>
+                 <string>Open</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QRadioButton" name="radioButton_debug_off">
                 <property name="text">
-                 <string>关</string>
+                 <string>Related</string>
                 </property>
                </widget>
               </item>
@@ -1086,7 +1086,7 @@ p, li { white-space: pre-wrap; }
           <item>
            <widget class="QGroupBox" name="groupBox_4">
             <property name="title">
-             <string>检测更新：</string>
+             <string>检 measurement update / 检测更新：</string>
             </property>
             <widget class="QWidget" name="horizontalLayoutWidget_10">
              <property name="geometry">
@@ -1101,14 +1101,14 @@ p, li { white-space: pre-wrap; }
               <item>
                <widget class="QRadioButton" name="radioButton_update_on">
                 <property name="text">
-                 <string>开</string>
+                 <string>Open</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QRadioButton" name="radioButton_update_off">
                 <property name="text">
-                 <string>关</string>
+                 <string>Related</string>
                 </property>
                </widget>
               </item>
@@ -1119,7 +1119,7 @@ p, li { white-space: pre-wrap; }
           <item>
            <widget class="QGroupBox" name="groupBox_17">
             <property name="title">
-             <string>保存日志：</string>
+             <string>Preservation date：</string>
             </property>
             <widget class="QWidget" name="horizontalLayoutWidget_11">
              <property name="geometry">
@@ -1134,14 +1134,14 @@ p, li { white-space: pre-wrap; }
               <item>
                <widget class="QRadioButton" name="radioButton_log_on">
                 <property name="text">
-                 <string>开</string>
+                 <string>Open</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QRadioButton" name="radioButton_log_off">
                 <property name="text">
-                 <string>关</string>
+                 <string>Related</string>
                 </property>
                </widget>
               </item>
@@ -1152,7 +1152,7 @@ p, li { white-space: pre-wrap; }
           <item>
            <widget class="QGroupBox" name="groupBox_15">
             <property name="title">
-             <string>失败后移动文件：</string>
+             <string>Post-disappearance transfer statement ：</string>
             </property>
             <widget class="QWidget" name="horizontalLayoutWidget_12">
              <property name="geometry">
@@ -1167,14 +1167,14 @@ p, li { white-space: pre-wrap; }
               <item>
                <widget class="QRadioButton" name="radioButton_fail_move_on">
                 <property name="text">
-                 <string>开</string>
+                 <string>Open</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QRadioButton" name="radioButton_fail_move_off">
                 <property name="text">
-                 <string>关</string>
+                 <string>Related</string>
                 </property>
                </widget>
               </item>
@@ -1185,7 +1185,7 @@ p, li { white-space: pre-wrap; }
           <item>
            <widget class="QGroupBox" name="groupBox_23">
             <property name="title">
-             <string>下载剧照：</string>
+             <string>Download ：</string>
             </property>
             <widget class="QWidget" name="horizontalLayoutWidget_13">
              <property name="geometry">
@@ -1200,14 +1200,14 @@ p, li { white-space: pre-wrap; }
               <item>
                <widget class="QRadioButton" name="radioButton_extrafanart_download_on">
                 <property name="text">
-                 <string>开</string>
+                 <string>Open</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QRadioButton" name="radioButton_extrafanart_download_off">
                 <property name="text">
-                 <string>关</string>
+                 <string>Related</string>
                 </property>
                </widget>
               </item>
@@ -1228,7 +1228,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="title">
-         <string>网站选择</string>
+         <string>Website Choice</string>
         </property>
         <widget class="QComboBox" name="comboBox_website_all">
          <property name="geometry">
@@ -1296,7 +1296,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="title">
-         <string>下载文件</string>
+         <string>Download text</string>
         </property>
         <widget class="QWidget" name="horizontalLayoutWidget_14">
          <property name="geometry">
@@ -1342,7 +1342,7 @@ p, li { white-space: pre-wrap; }
       </widget>
       <widget class="QWidget" name="tab_2">
        <attribute name="title">
-        <string>目录设置</string>
+        <string>Catalog setting</string>
        </attribute>
        <widget class="QGroupBox" name="groupBox_8">
         <property name="geometry">
@@ -1354,7 +1354,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="title">
-         <string>命名规则</string>
+         <string>Naming convention</string>
         </property>
         <widget class="QWidget" name="formLayoutWidget_4">
          <property name="geometry">
@@ -1369,7 +1369,7 @@ p, li { white-space: pre-wrap; }
           <item row="0" column="0">
            <widget class="QLabel" name="label_43">
             <property name="text">
-             <string>   目录命名：             </string>
+             <string>   Catalog naming：             </string>
             </property>
            </widget>
           </item>
@@ -1379,7 +1379,7 @@ p, li { white-space: pre-wrap; }
           <item row="1" column="0">
            <widget class="QLabel" name="label_44">
             <property name="text">
-             <string>   视频标题(媒体库中):      </string>
+             <string>   Video title (in the middle of the medium):      </string>
             </property>
            </widget>
           </item>
@@ -1389,7 +1389,7 @@ p, li { white-space: pre-wrap; }
           <item row="2" column="0">
            <widget class="QLabel" name="label_45">
             <property name="text">
-             <string>   视频标题(本地文件)：   </string>
+             <string>   Video title (local text)：   </string>
             </property>
            </widget>
           </item>
@@ -1409,7 +1409,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="title">
-         <string>目录设置</string>
+         <string>Catalog setting</string>
         </property>
         <widget class="QWidget" name="formLayoutWidget_5">
          <property name="geometry">
@@ -1424,7 +1424,7 @@ p, li { white-space: pre-wrap; }
           <item row="0" column="0">
            <widget class="QLabel" name="label_49">
             <property name="text">
-             <string>   视频目录：</string>
+             <string>   Video recording：</string>
             </property>
            </widget>
           </item>
@@ -1434,7 +1434,7 @@ p, li { white-space: pre-wrap; }
           <item row="2" column="0">
            <widget class="QLabel" name="label_40">
             <property name="text">
-             <string>   视频类型：              </string>
+             <string>   Video type：              </string>
             </property>
            </widget>
           </item>
@@ -1444,7 +1444,7 @@ p, li { white-space: pre-wrap; }
           <item row="3" column="0">
            <widget class="QLabel" name="label_42">
             <property name="text">
-             <string>   字幕类型：             </string>
+             <string>   Subtitle type：             </string>
             </property>
            </widget>
           </item>
@@ -1454,7 +1454,7 @@ p, li { white-space: pre-wrap; }
           <item row="4" column="0">
            <widget class="QLabel" name="label_46">
             <property name="text">
-             <string>   失败输出目录：           </string>
+             <string>   Lost exports：           </string>
             </property>
            </widget>
           </item>
@@ -1467,7 +1467,7 @@ p, li { white-space: pre-wrap; }
              <enum>QFrame::NoFrame</enum>
             </property>
             <property name="text">
-             <string>   成功输出目录：         </string>
+             <string>   Successful export catalog ：         </string>
             </property>
            </widget>
           </item>
@@ -1477,7 +1477,7 @@ p, li { white-space: pre-wrap; }
           <item row="1" column="0">
            <widget class="QLabel" name="label_48">
             <property name="text">
-             <string>   排除目录：</string>
+             <string>   Exclusion list ：</string>
             </property>
            </widget>
           </item>
@@ -1490,7 +1490,7 @@ p, li { white-space: pre-wrap; }
              <enum>QFrame::NoFrame</enum>
             </property>
             <property name="text">
-             <string>   剧照目录：         </string>
+             <string>   Recorded ：         </string>
             </property>
            </widget>
           </item>
@@ -1509,16 +1509,16 @@ p, li { white-space: pre-wrap; }
           </rect>
          </property>
          <property name="text">
-          <string>说明：
-    1、‘排除目录’、‘成功输出目录’、‘失败输出目录’应为‘视频目录’下的目录。
-    2‘成功输出目录’、‘失败输出目录’不存在，则会在‘视频目录’下创建。、</string>
+          <string>Explanation:
+     1, "Exclusion catalog", "Successful export catalog", "Disappearance export catalog", "Video registration".
+     2 "Successful exports", "Disappearances" does not exist, "Videos" in the meeting. , </</string>
          </property>
         </widget>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_4">
        <attribute name="title">
-        <string>水印设置</string>
+        <string>Watermark setting</string>
        </attribute>
        <widget class="QGroupBox" name="groupBox_14">
         <property name="geometry">
@@ -1530,7 +1530,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="title">
-         <string>要添加的水印类型</string>
+         <string>Additive-required watermark type</string>
         </property>
         <widget class="QWidget" name="horizontalLayoutWidget_3">
          <property name="geometry">
@@ -1545,21 +1545,21 @@ p, li { white-space: pre-wrap; }
           <item>
            <widget class="QCheckBox" name="checkBox_sub">
             <property name="text">
-             <string>字幕</string>
+             <string>subtitles</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QCheckBox" name="checkBox_leak">
             <property name="text">
-             <string>流出</string>
+             <string>leak</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QCheckBox" name="checkBox_uncensored">
             <property name="text">
-             <string>无码</string>
+             <string>uncensored</string>
             </property>
            </widget>
           </item>
@@ -1576,7 +1576,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="title">
-         <string>首个水印位置</string>
+         <string>首个水印位置 / Neck individual water mark position</string>
         </property>
         <widget class="QWidget" name="horizontalLayoutWidget_2">
          <property name="geometry">
@@ -1591,28 +1591,28 @@ p, li { white-space: pre-wrap; }
           <item>
            <widget class="QRadioButton" name="radioButton_top_left">
             <property name="text">
-             <string>左上</string>
+             <string>upper left</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QRadioButton" name="radioButton_bottom_left">
             <property name="text">
-             <string>左下</string>
+             <string>lower left</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QRadioButton" name="radioButton_top_right">
             <property name="text">
-             <string>右上</string>
+             <string>Upper right</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QRadioButton" name="radioButton_bottom_right">
             <property name="text">
-             <string>右下</string>
+             <string>Lower right</string>
             </property>
            </widget>
           </item>
@@ -1629,7 +1629,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="title">
-         <string>水印大小</string>
+         <string>Watermark size</string>
         </property>
         <widget class="QWidget" name="horizontalLayoutWidget_4">
          <property name="geometry">
@@ -1680,7 +1680,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="title">
-         <string>封面图添加水印</string>
+         <string>Watermark with watermark</string>
         </property>
         <widget class="QWidget" name="horizontalLayoutWidget_5">
          <property name="geometry">
@@ -1719,9 +1719,9 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>说明：
-    1、多个水印时,从首个水印,顺时针添加.
-    2、水印文件可自己替换,分辨率要求长宽 500x300,背景透明，png格式.</string>
+         <string>Explanation:
+     1. Multi-individual water mark, Neck individual water mark, Watermark addition.
+     2, Watermark text possible Self-replacement, watermark rate request Nagato 500x300, background transparent, png format.</string>
         </property>
        </widget>
        <widget class="QGroupBox" name="groupBox_22">
@@ -1734,7 +1734,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="title">
-         <string>缩略图添加水印</string>
+         <string>Thumbnail addition Watermark</string>
         </property>
         <widget class="QWidget" name="horizontalLayoutWidget_6">
          <property name="geometry">
@@ -1749,14 +1749,14 @@ p, li { white-space: pre-wrap; }
           <item>
            <widget class="QRadioButton" name="radioButton_thumb_mark_on">
             <property name="text">
-             <string>开</string>
+             <string>Open</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QRadioButton" name="radioButton_thumb_mark_off">
             <property name="text">
-             <string>关</string>
+             <string>Related</string>
             </property>
            </widget>
           </item>
@@ -1766,7 +1766,7 @@ p, li { white-space: pre-wrap; }
       </widget>
       <widget class="QWidget" name="tab_3">
        <attribute name="title">
-        <string>其它设置</string>
+        <string>Other installation</string>
        </attribute>
        <widget class="QGroupBox" name="groupBox_9">
         <property name="geometry">
@@ -1778,7 +1778,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="title">
-         <string>代理设置</string>
+         <string>Proxy setting</string>
         </property>
         <widget class="QWidget" name="formLayoutWidget_2">
          <property name="geometry">
@@ -1793,7 +1793,7 @@ p, li { white-space: pre-wrap; }
           <item row="1" column="0">
            <widget class="QLabel" name="label_25">
             <property name="text">
-             <string>   IP+端口号:                </string>
+             <string>   IP + end port:                </string>
             </property>
            </widget>
           </item>
@@ -1803,14 +1803,14 @@ p, li { white-space: pre-wrap; }
           <item row="2" column="0">
            <widget class="QLabel" name="label_26">
             <property name="text">
-             <string>   超时重试时间：   </string>
+             <string>   Super time / 超时重试时间：   </string>
             </property>
            </widget>
           </item>
           <item row="3" column="0">
            <widget class="QLabel" name="label_27">
             <property name="text">
-             <string>   重试次数：          </string>
+             <string>   Degree of order ：          </string>
             </property>
            </widget>
           </item>
@@ -1877,7 +1877,7 @@ p, li { white-space: pre-wrap; }
           <item row="0" column="0">
            <widget class="QLabel" name="label_19">
             <property name="text">
-             <string>   代理：        </string>
+             <string>   Proxy ：        </string>
             </property>
            </widget>
           </item>
@@ -1900,7 +1900,7 @@ p, li { white-space: pre-wrap; }
             <item>
              <widget class="QRadioButton" name="radioButton_proxy_nouse">
               <property name="text">
-               <string>不使用</string>
+               <string>Not used</string>
               </property>
              </widget>
             </item>
@@ -1919,7 +1919,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="title">
-         <string>无码封面</string>
+         <string>Unsealed surface</string>
         </property>
         <widget class="QLabel" name="label_14">
          <property name="geometry">
@@ -1931,9 +1931,9 @@ p, li { white-space: pre-wrap; }
           </rect>
          </property>
          <property name="text">
-          <string>说明：
-    1、官方封面--完整、不清晰；裁剪封面--清晰、不完整。
-    2、官方无图，自动裁剪缩略图。</string>
+          <string>Explanation:
+     1. Official sealed surface--complete, unclean; trimming sealed surface--clean, unclean.
+     2, official image, automatic trimming thumbnail.</string>
          </property>
         </widget>
         <widget class="QWidget" name="horizontalLayoutWidget_24">
@@ -1949,14 +1949,14 @@ p, li { white-space: pre-wrap; }
           <item>
            <widget class="QRadioButton" name="radioButton_poster_official">
             <property name="text">
-             <string>官方</string>
+             <string>Official</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QRadioButton" name="radioButton_poster_cut">
             <property name="text">
-             <string>裁剪</string>
+             <string>Cropping</string>
             </property>
            </widget>
           </item>
@@ -1973,7 +1973,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="title">
-         <string>无码番号</string>
+         <string>No sword number / 无码番号</string>
         </property>
         <widget class="QWidget" name="formLayoutWidget">
          <property name="geometry">
@@ -1988,7 +1988,7 @@ p, li { white-space: pre-wrap; }
           <item row="0" column="0">
            <widget class="QLabel" name="label_16">
             <property name="text">
-             <string>   无码番号前缀：        </string>
+             <string>   No-number prefix：        </string>
             </property>
            </widget>
           </item>
@@ -2007,7 +2007,7 @@ p, li { white-space: pre-wrap; }
           </rect>
          </property>
          <property name="text">
-          <string>说明：只添加 HEYZO、n1111、111111-111之外的前缀。</string>
+          <string>Explanation: Addition HEYZO, n1111, 111111-111 External prefix.</string>
          </property>
         </widget>
        </widget>
@@ -2021,7 +2021,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="title">
-         <string>排除设置</string>
+         <string>Exclusion setting</string>
         </property>
         <widget class="QWidget" name="formLayoutWidget_3">
          <property name="geometry">
@@ -2036,7 +2036,7 @@ p, li { white-space: pre-wrap; }
           <item row="0" column="0">
            <widget class="QLabel" name="label_38">
             <property name="text">
-             <string>   异常字符:            </string>
+             <string>   Normal character:            </string>
             </property>
            </widget>
           </item>
@@ -2046,7 +2046,7 @@ p, li { white-space: pre-wrap; }
           <item row="1" column="0">
            <widget class="QLabel" name="label_39">
             <property name="text">
-             <string>   多余字符串:         </string>
+             <string>   Multi-string skewer:         </string>
             </property>
            </widget>
           </item>
@@ -2068,7 +2068,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>恢复默认</string>
+       <string>Recovery</string>
       </property>
      </widget>
     </widget>
@@ -2209,7 +2209,7 @@ p, li { white-space: pre-wrap; }
       </rect>
      </property>
      <property name="text">
-      <string>图标</string>
+      <string>Icon</string>
      </property>
     </widget>
     <widget class="QWidget" name="layoutWidget">
@@ -2256,7 +2256,7 @@ p, li { white-space: pre-wrap; }
       <item>
        <widget class="QPushButton" name="pushButton_main">
         <property name="text">
-         <string>主界面</string>
+         <string>Main interface</string>
         </property>
        </widget>
       </item>
@@ -2276,7 +2276,7 @@ p, li { white-space: pre-wrap; }
       <item>
        <widget class="QPushButton" name="pushButton_log">
         <property name="text">
-         <string>日志</string>
+         <string>Diary</string>
         </property>
        </widget>
       </item>
@@ -2296,7 +2296,7 @@ p, li { white-space: pre-wrap; }
       <item>
        <widget class="QPushButton" name="pushButton_tool">
         <property name="text">
-         <string>工具</string>
+         <string>tool</string>
         </property>
        </widget>
       </item>
@@ -2316,7 +2316,7 @@ p, li { white-space: pre-wrap; }
       <item>
        <widget class="QPushButton" name="pushButton_setting">
         <property name="text">
-         <string>设置</string>
+         <string>Installation</string>
         </property>
        </widget>
       </item>
@@ -2336,7 +2336,7 @@ p, li { white-space: pre-wrap; }
       <item>
        <widget class="QPushButton" name="pushButton_about">
         <property name="text">
-         <string>关于</string>
+         <string>Related</string>
         </property>
        </widget>
       </item>
